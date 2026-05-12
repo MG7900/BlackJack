@@ -14,11 +14,14 @@ public class BasicGameApp {
 
         for(int b = 0; b < deck.length; b++){
             deck[b] = new Card(10, b, "Clubs");
-            deck[b].printInfo();
         }
+
+        printDeck();
     }
 
     public void printDeck(){
-
+        for(int c = 0; c < deck.length; c++){
+            deck[c].printInfo();
+        }
     }
 }
