@@ -11,12 +11,16 @@ public class BasicGameApp {
     public BasicGameApp(){
         System.out.println("Welcome to Blackjack!");
         deck = new Card[52];
+        dealer1 = new Dealer();
+        player1 = new Player();
 
         for(int b = 0; b < deck.length; b++){
             deck[b] = new Card(10, b, "Clubs");
         }
 
         printDeck();
+        dealer1.printInfo();
+        player1.printInfo();
     }
 
     public void printDeck(){
