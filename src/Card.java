@@ -7,43 +7,43 @@ public class Card {
     //todo: make a constructor that takes in three parameters and
     public Card(int pvalues, int pname, String psuit){
         value = pvalues;
-        if(pname == 0 || pname == 1 || pname == 2 || pname == 3) {
+        if(pname == 0) {
             name = "Ace";
             value = 1;
-        } else if(pname == 4 || pname == 5 || pname == 6 || pname == 7){
+        } else if(pname == 1){
             name = "Two";
             value = 2;
-        } else if(pname == 8 || pname == 9 || pname == 10 || pname == 11){
+        } else if(pname == 2){
             name = "Three";
             value = 3;
-        } else if(pname == 12 || pname == 13 || pname == 14 || pname == 15){
+        } else if(pname == 3){
             name = "Four";
             value = 4;
-        } else if(pname == 16 || pname == 17 || pname == 18 || pname == 19){
+        } else if(pname == 4){
             name = "Five";
             value = 5;
-        } else if(pname == 20 || pname == 21 || pname == 22 || pname == 23){
+        } else if(pname == 5){
             name = "Six";
             value = 6;
-        } else if(pname == 24 || pname == 25 || pname == 26 || pname == 27){
+        } else if(pname == 6){
             name = "Seven";
             value = 7;
-        } else if(pname == 28 || pname == 29 || pname == 30 || pname == 31){
+        } else if(pname == 7){
             name = "Eight";
             value = 8;
-        } else if(pname == 32 || pname == 33 || pname == 34 || pname == 35){
+        } else if(pname == 8){
             name = "Nine";
             value = 9;
-        } else if(pname == 36 || pname == 37 || pname == 38 || pname == 39){
+        } else if(pname == 9){
             name = "King";
             value = 10;
-        } else if(pname == 40 || pname == 41 || pname == 42 || pname == 43){
+        } else if(pname == 10){
             name = "Jack";
             value = 10;
-        } else if(pname == 44 || pname == 45 || pname == 46 || pname == 47){
+        } else if(pname == 11){
             name = "Queen";
             value = 10;
-        } else if(pname == 48 || pname == 49 || pname == 50 || pname == 51){
+        } else if(pname == 12){
             name = "Two";
             value = 10;
         }
@@ -51,9 +51,6 @@ public class Card {
     }
 
     public void printInfo(){
-//        System.out.println(values);
-//        System.out.println(name);
-//        System.out.println(suit);
         System.out.println("The value of " + name + " of " + suit + " is worth " + value + " points.");
     }
 }

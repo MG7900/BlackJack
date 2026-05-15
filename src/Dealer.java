@@ -11,9 +11,9 @@ public class Dealer {
     }
 
     public void printInfo(){
-        System.out.println(isOver16);
-        System.out.println(card_total);
-        System.out.println(isBust);
+        System.out.println("isOver16: " + isOver16);
+        System.out.println("Card total: " + card_total);
+        System.out.println("isBust: " + isBust);
         for(int a = 0; a <= hand.length; a++){
             System.out.println(hand[a]);
         }
