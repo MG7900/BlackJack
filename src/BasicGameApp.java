@@ -17,11 +17,9 @@ public class BasicGameApp {
         dealer1 = new Dealer();
         player1 = new Player();
 
-        for(int b = 0; b < deck.length; b++){
-            deck[b] = new Card(10, b, "Clubs");
-
+        for(int b = 0; b < 4; b++){
             for(int c = 0; c < 13; c++){
-                deck[cardIndex] = new Card(b, 10, c);
+                deck[cardIndex] = new Card(c, 10, b);
                 cardIndex++;
             }
         }
@@ -52,7 +50,8 @@ public class BasicGameApp {
         for(int d = 0; d < deck.length; d++){
             int randy = (int)(Math.random()*52);
             Card helper = deck[randy];
-
+            deck[randy] = deck[d];
+            deck[d] = helper;
         }
     }
 

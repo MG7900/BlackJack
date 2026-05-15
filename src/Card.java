@@ -5,7 +5,7 @@ public class Card {
     public String suit;
 
     //todo: make a constructor that takes in three parameters and
-    public Card(int pvalues, int pname, String psuit){
+    public Card(int pvalues, int pname, int psuit){
         value = pvalues;
         if(pname == 0) {
             name = "Ace";
@@ -47,7 +47,18 @@ public class Card {
             name = "Two";
             value = 10;
         }
-        suit = psuit;
+        if(psuit == 1){
+            name = "Hearts";
+        }
+        if(pname == 2){
+            name = "Clubs";
+        }
+        if(pname == 3){
+            name = "Diamonds";
+        }
+        if(pname == 12){
+            name = "Spades";
+        }
     }
 
     public void printInfo(){
