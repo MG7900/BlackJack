@@ -15,11 +15,11 @@ public class Player {
     }
 
     public void printInfo(){
-        System.out.println("Name: " + name);
-        System.out.println("isBust: " + isBust);
-        System.out.println("isHit: " + isHit);
-        System.out.println("Card total: " + card_total);
-        for(int a = 0; a <= hand.length; a++){
+        System.out.println("player1.Name: " + name);
+        System.out.println("player1.isBust: " + isBust);
+        System.out.println("player1.isHit: " + isHit);
+        System.out.println("player1.Card total: " + card_total);
+        for(int a = 0; a < hand.length; a++){
             hand[a].printInfo();
         }
     }

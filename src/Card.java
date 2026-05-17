@@ -7,6 +7,7 @@ public class Card {
     //todo: make a constructor that takes in three parameters and
     public Card(int pvalues, int pname, int psuit){
         value = pvalues;
+
         if(pname == 0) {
             name = "Ace";
             value = 1;
@@ -47,17 +48,17 @@ public class Card {
             name = "Two";
             value = 10;
         }
+        if(psuit == 0){
+            suit = "Hearts";
+        }
         if(psuit == 1){
-            name = "Hearts";
+            suit = "Clubs";
         }
         if(pname == 2){
-            name = "Clubs";
+            suit = "Diamonds";
         }
-        if(pname == 3){
-            name = "Diamonds";
-        }
-        if(pname == 12){
-            name = "Spades";
+        if(psuit == 3){
+            suit = "Spades";
         }
     }
 

@@ -7,8 +7,10 @@ public class BasicGameApp {
     public boolean game_on;
 
     public static void main(String[] args) {
-        BasicGameApp a = new BasicGameApp();
+        BasicGameApp A = new BasicGameApp();
     }
+
+
 
     public BasicGameApp(){
         System.out.println("Welcome to Blackjack!");
@@ -19,13 +21,13 @@ public class BasicGameApp {
 
         for(int b = 0; b < 4; b++){
             for(int c = 0; c < 13; c++){
-                deck[cardIndex] = new Card(c, 10, b);
+                deck[cardIndex] = new Card(c, (int)(Math.random()*10), b);
                 cardIndex++;
             }
         }
 
         shuffle();
-        printDeck();
+        //printDeck();
         //give the player cards
         player1.hand[0] = deck[0];
         player1.hand[1] = deck[1];
@@ -36,8 +38,13 @@ public class BasicGameApp {
         System.out.println(aName);
         player1.name = aName;
         player1.calculateTotal();
+        player1.printInfo();
+
         dealer1.hand[0] = deck[2];
-        dealer1.hand[0] = deck[3];
+        dealer1.hand[1] = deck[3];
+        dealer1.calculateTotal();
+        dealer1.printInfo();
+
     }
 
     public void printDeck(){
