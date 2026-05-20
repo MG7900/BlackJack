@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
 import java.awt.image.BufferStrategy;
@@ -22,7 +21,10 @@ public class BasicGameApp implements MouseListener {
     public Card[] deck;
     public Player player1;
     public Dealer dealer1;
+
     public boolean start_game;
+    public boolean mouseheld;
+    public boolean isSplit;
 
     public static void main(String[] args) {
         BasicGameApp A = new BasicGameApp();
@@ -33,6 +35,10 @@ public class BasicGameApp implements MouseListener {
         start_game = false;
         setUpGraphics();
         render();
+
+        startHitbox = new Rectangle(400, 400, 200, 50);
+
+        mouseheld = false;
 
         System.out.println("Welcome to Blackjack!");
         deck = new Card[52];
@@ -50,10 +56,10 @@ public class BasicGameApp implements MouseListener {
         shuffle();
         //printDeck();
         //give the player cards
-        hand();
+        initial_hand();
     }
 
-    public void hand() {
+    public void initial_hand() {
         player1.hand[0] = deck[0];
         player1.hand[1] = deck[1];
         //todo hw: give the dealer 2 cards
@@ -74,6 +80,10 @@ public class BasicGameApp implements MouseListener {
             System.out.println(player1.name + " Wins!");
         } else if (player1.isBust) {
             System.out.println("Dealer Wins!");
+        } else if (!player1.isBust && player1.hand[0] == player1.hand[1]){
+            System.out.println("Do you want to split your cards?");
+            if(mouse.hitbox.intersects(split.hitbox))
+            boolean isSplit = true;
         }
     }
 
